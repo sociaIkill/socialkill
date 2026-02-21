@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOCIALKILL | CONTACT</title>
+    <link rel="stylesheet" href="style-contact.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader"><div class="loader-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+    <div id="flash-overlay"></div>
+    <div id="scroll-progress"></div>
+    <div class="edge-line"></div>
+    <canvas id="particles-bg"></canvas>
+    <div class="cursor-dot"></div>
+    <div class="cursor-trace"></div>
+
+    <nav class="side-nav">
+        <a href="index.html" class="nav-item clickable" data-label="Home"></a>
+        <a href="works.html" class="nav-item clickable" data-label="Works"></a>
+        <a href="team.html" class="nav-item clickable" data-label="Team"></a>
+        <a href="contact.html" class="nav-item clickable" data-label="Contact"></a>
+    </nav>
+
+    <header style="position: absolute; top: 50px; left: 10vw; z-index: 10;">
+        <div class="fade-up" style="display: flex; align-items: baseline; gap: 20px;">
+            <h2 style="font-size: 12px; letter-spacing: 5px; font-weight: 400; opacity: 0.5;">[ COMMS_CHANNEL ]</h2>
+            <h1 style="font-size: 24px; font-weight: 900; letter-spacing: -1px;">ESTABLISH_CONNECTION</h1>
+        </div>
+        <div class="fade-up" style="width: 100px; height: 1px; background: #fff; margin-top: 10px; opacity: 0.3;"></div>
+    </header>
+
+    <section style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div class="fade-up" style="width: 600px; max-width: 90vw;">
+            <div class="terminal-input-wrapper">
+                <span class="terminal-prefix">>></span>
+                <input type="text" id="contact-input" placeholder="ENTER_MESSAGE..." autocomplete="off">
+                <div class="input-line"></div>
+            </div>
+            <button id="send-btn" class="clickable">[ SEND_PACKET ]</button>
+            <div id="status-msg"></div>
+        </div>
+        
+        <div class="social-container fade-up">
+            <a href="https://t.me/sociaIkill" target="_blank" class="social-link clickable">TELEGRAM</a>
+            <a href="mailto:socialkill@mail.ru" class="social-link clickable">EMAIL</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="api-config.js"></script>
+    <script src="system-core.js"></script>
+</body>
+</html>
