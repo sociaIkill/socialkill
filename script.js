@@ -178,6 +178,7 @@ window.addEventListener('scroll', () => {
     const progress = document.getElementById("scroll-progress");
     if(progress) progress.style.width = scrolled + "%";
 });
+
 const modalData = {
 '???': {
     type: 'member',
@@ -316,15 +317,21 @@ document.addEventListener('click', (e) => {
                     </div>
                 `;
             }
+            // Плавное открытие
             overlay.style.display = 'flex';
+            setTimeout(() => { overlay.classList.add('active'); }, 10);
             document.body.style.overflow = 'hidden'; 
         }
     }
 
     if (e.target.id === 'modal-close' || e.target === overlay) {
         if (overlay) {
-            overlay.style.display = 'none';
-            document.body.style.overflow = 'auto';
+            // Плавное закрытие
+            overlay.classList.remove('active');
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 500); // 500ms - время анимации в CSS
         }
     }
 });
