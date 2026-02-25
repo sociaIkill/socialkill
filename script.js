@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
             loader.style.opacity = '0';
             setTimeout(() => {
                 loader.style.display = 'none';
-                typeWriter("SOCIALKILL", "hero-title", 120);
+                typeWriter("SOCIAIKILL", "hero-title", 120);
                 initObserver();
                 initParticles();
                 animate();
@@ -280,4 +280,5 @@ document.addEventListener('click', (e) => {
             document.body.style.overflow = 'auto';
         }
     }
+
 });
