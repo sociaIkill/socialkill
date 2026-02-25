@@ -317,7 +317,6 @@ document.addEventListener('click', (e) => {
                     </div>
                 `;
             }
-            // Плавное открытие
             overlay.style.display = 'flex';
             setTimeout(() => { overlay.classList.add('active'); }, 10);
             document.body.style.overflow = 'hidden'; 
@@ -326,12 +325,11 @@ document.addEventListener('click', (e) => {
 
     if (e.target.id === 'modal-close' || e.target === overlay) {
         if (overlay) {
-            // Плавное закрытие
             overlay.classList.remove('active');
             setTimeout(() => {
                 overlay.style.display = 'none';
                 document.body.style.overflow = 'auto';
-            }, 500); // 500ms - время анимации в CSS
+            }, 500);
         }
     }
 });
