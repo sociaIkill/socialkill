@@ -5,19 +5,42 @@ const ctx = canvas ? canvas.getContext('2d') : null;
 
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
-    if (loader) {
-        setTimeout(() => {
+    const loaderContent = document.querySelector('.loader-content');
+    
+    initEdgeLine();
+
+    if (loader && loaderContent) {
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => loader.classList.add('visible'), 100);
+
+        loaderContent.addEventListener('click', () => {
             loader.style.opacity = '0';
             setTimeout(() => {
                 loader.style.display = 'none';
-                typeWriter("SOCIAIKILL", "hero-title", 120);
-                initObserver();
-                initParticles();
-                animate();
-            }, 800);
-        }, 1000);
+                document.body.style.overflow = 'auto'; 
+                startAllSystems();
+            }, 1000);
+        });
+    } else {
+        document.body.style.overflow = 'auto';
+        startAllSystems();
     }
 });
+
+function initEdgeLine() {
+    if (!document.querySelector('.edge-line')) {
+        const line = document.createElement('div');
+        line.className = 'edge-line';
+        document.body.appendChild(line);
+    }
+}
+
+function startAllSystems() {
+    typeWriter("SOCIAIKILL", "hero-title", 120);
+    initObserver();
+    initParticles();
+    animate();
+}
 
 function typeWriter(text, elementId, speed) {
     let i = 0;
@@ -227,7 +250,7 @@ const modalData = {
                     <span style="font-weight: 900; letter-spacing: 1px;">LICENSE_ACCESS:</span>
                     <span style="font-family: monospace; font-weight: 900; color: #ff0000;">$10.00 / LIFETIME</span>
                 </div>
-                <a href="https://t.me/sociaIkill_bot" target="_blank" class="buy-button-modal">
+                <a href="https://t.me/sociaIkill" target="_blank" class="buy-button-modal">
                     [ BUY ]
                 </a>
             </div>`
