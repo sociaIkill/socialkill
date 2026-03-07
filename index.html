@@ -9,12 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="loader"><div class="loader-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
-    <div id="flash-overlay"></div>
-    <div id="scroll-progress"></div>
-    <div class="edge-line"></div>
-    <canvas id="particles-bg"></canvas>
+<div id="loader">
+    <div class="loader-content clickable">
+        <img src="img/loader-image.jpg" class="loader-img" alt="System Logo">
+        <div class="loader-info">
+            <p class="loader-links">sociaIkill.ru / t.me/sociaIkill</p>
+            <p class="loader-disclaimer">we are <b>not associated</b> with any other links</p>
+        </div>
+    </div>
+</div>
 
+    <canvas id="particles-bg" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #000;"></canvas>
     <div class="cursor-dot"></div>
     <div class="cursor-trace"></div>
 
