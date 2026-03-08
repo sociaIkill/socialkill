@@ -207,10 +207,19 @@ const modalData = {
     type: 'member',
     name: '// ???',
     role: 'DEVELOPER',
-    bio: 'Python exploit developer. Reverse engineering enthusiast. Founder of SOCIALKILL.',
+    bio: 'Python exploit developer. Reverse engineering enthusiast. Founder of SOCIAIKILL.',
     image: 'img/name.jpg',
     tg_link: 'https://t.me/sociaIkillowner',
     tg_name: '@socialkillowner'
+},
+'meta': {
+    type: 'member',
+    name: '// meta',
+    role: 'informator',
+    bio: 'Information support internal helper, offline-trace source.',
+    image: 'img/informator.jpg',
+    tg_link: '#',
+    tg_name: 'no link'
 },
 'orbital-rat': {
     type: 'project',
