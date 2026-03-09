@@ -306,7 +306,52 @@ const modalData = {
                     <span style="font-weight: 900; letter-spacing: 1px; font-size: 12px;">FILE_ACCESS:</span>
                     <span style="font-family: monospace; font-weight: 900; color: #000;">DDOS_TOOL.RAR</span>
                 </div>
-            <a href="https://cdn.discordapp.com/attachments/1474735923819446344/1476288703499604183/ddostool.rar?ex=69a0947f&is=699f42ff&hm=93d75eff9ff38a1f5028712cb5f4064537dea6bc47f3b2d27c7aebc08744c319&" download class="free-dl-button">[ DOWNLOAD_FREE ]</a>
+            <a href="https://cdn.discordapp.com/attachments/1474735923819446344/1476288703499604183/ddostool.rar?ex=69b0667f&is=69af14ff&hm=63e079ef7b32a22f74a2e93eabdaf47d3aac662abdb52c2f4aa6bbf7fcaa3b3e&" download class="free-dl-button">[ DOWNLOAD_FREE ]</a>
+            </div>
+        </div>`
+},
+'sc_brw': {
+    type: 'exploit',
+    title: "SC_BRW // V1.0",
+    content: `
+        <div style="color: #000; font-family: 'Inter', sans-serif;">
+            <div style="display: flex; gap: 30px; margin-bottom: 30px; align-items: flex-start; flex-wrap: wrap;">
+                <img src="img/brw.png" style="width: 100%; max-width: 350px; height: 200px; object-fit: cover; border: 1px solid #000; filter: grayscale(1) contrast(1.2);">
+                <div style="flex: 1; min-width: 250px;">
+                    <div style="font-size: 10px; font-weight: 900; letter-spacing: 2px; opacity: 0.4; margin-bottom: 10px;">[ UTILITY_OVERVIEW ]</div>
+                    <p style="font-size: 14px; line-height: 1.6; opacity: 0.8;">
+                        Кастомное браузерное решение на движке Chromium от sociaikill. Разработано для анонимного веб-серфинга и визуального реверс-инжиниринга. Полная изоляция профиля, поддержка динамических фонов и анимированных интерфейсов.
+                    </p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 25px;">
+                <div>
+                    <h4 style="font-size: 12px; font-weight: 900; text-transform: uppercase; margin-bottom: 12px;">> FUNCTIONALITY:</h4>
+                    <ul style="font-size: 13px; list-style: none; padding: 0; line-height: 2;">
+                        <li>• Isolated Chromium Engine: Полная поддержка WebEngine</li>
+                        <li>• Theme Engine: Динамическое переключение Black/White режимов</li>
+                        <li>• Background Injection: Кастомные обои с блюр-эффектами</li>
+                        <li>• Privacy Focus: Локальное хранение сессий и профилей</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 12px; font-weight: 900; text-transform: uppercase; margin-bottom: 12px;">> TECHNICAL_DATA:</h4>
+                    <ul style="font-size: 13px; list-style: none; padding: 0; line-height: 2;">
+                        <li>• Core: PySide6 / QtWebEngine</li>
+                        <li>• UI Architecture: Frameless / Translucent CSS</li>
+                        <li>• Backend: Python 3.10+</li>
+                        <li>• Visuals: High-fidelity animations (OutExpo Curve)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 35px; padding: 25px; border: 1px solid #000; background: #fdfdfd;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <span style="font-weight: 900; letter-spacing: 1px; font-size: 12px;">FILE_ACCESS:</span>
+                    <span style="font-family: monospace; font-weight: 900; color: #000;">SC_BRW.RAR</span>
+                </div>
+            <a href="https://cdn.discordapp.com/attachments/1474735923819446344/1480656562090541096/SCBRW.rar?ex=69b07861&is=69af26e1&hm=23c73ae028b390fa32012622f2df4cb42c279d3da82a83bf54733289c153f87f&" download class="free-dl-button">[ DOWNLOAD_FREE ]</a>
             </div>
         </div>`
 }
