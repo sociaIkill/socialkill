@@ -27,6 +27,53 @@ window.addEventListener('load', () => {
     }
 });
 
+        document.addEventListener("DOMContentLoaded", () => {
+            const zoomElements = document.querySelectorAll('.zoom-in-scroll');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            zoomElements.forEach(el => observer.observe(el));
+
+            const loader = document.getElementById('loader');
+            const handImage = document.querySelector('.delayed-hand');
+            loader.style.opacity = '1'; 
+
+            loader.addEventListener('click', () => {
+                loader.style.opacity = '0';
+                
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    handImage.classList.add('start-animation');
+                }, 1000);
+            });
+        });
+
+        const video = document.getElementById('scroll-video');
+let hasPlayed = false;
+
+if (video) {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasPlayed) {
+                hasPlayed = true;
+                
+                video.play().catch(error => {
+                    console.log("Автозапуск со звуком заблокирован браузером:", error);
+                });
+            }
+        });
+    }, { 
+        threshold: 0.2
+    });
+
+    videoObserver.observe(video);
+}
+
 function initEdgeLine() {
     if (!document.querySelector('.edge-line')) {
         const line = document.createElement('div');
