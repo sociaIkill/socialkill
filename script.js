@@ -306,12 +306,53 @@ const modalData = {
                     <span style="font-weight: 900; letter-spacing: 1px;">LICENSE_ACCESS:</span>
                     <span style="font-family: monospace; font-weight: 900; color: #ff0000;">$10.00 / LIFETIME</span>
                 </div>
-                <a href="https://t.me/sociaIkill" target="_blank" class="buy-button-modal">
+                <a href="https://t.me/ssssssssssssssssssssssssss" target="_blank" class="buy-button-modal">
                     [ BUY ]
                 </a>
             </div>`
 },
+'winlock': {
+    type: 'project',
+    title: "SC_WINLOCK [v1]",
+    content: `
+        <div style="color: #000; font-family: 'Inter', sans-serif;">
+            <div style="display: flex; gap: 30px; margin-bottom: 30px; align-items: center; flex-wrap: wrap;">
+                <img src="img/work2.png" style="width: 100%; max-width: 400px; height: 200px; object-fit: cover; border: 1px solid #000; filter: contrast(1.2) grayscale(1);">
+                <div style="flex: 1; min-width: 250px;">
+                    <div style="font-size: 10px; font-weight: 900; letter-spacing: 2px; color: #ff0000; margin-bottom: 5px;">[ CLASSIFIED_INFORMATION ]</div>
+                    <p style="font-size: 14px; line-height: 1.4; opacity: 0.8;">
+                        Агрессивный системный блокиратор с перехватом критических потоков управления. Полная изоляция рабочей среды, блокировка ввода и обход защитных механизмов ОС.
+                    </p>
+                </div>
+            </div>
 
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 20px;">
+                <div>
+                    <h4 style="font-size: 12px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px;">> CORE_FEATURES:</h4>
+                    <ul style="font-size: 13px; list-style: none; padding: 0; line-height: 2;">
+                        <li>• Task Manager Hooking</li>
+                        <li>• Safe Mode Bypass</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 12px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px;">> TECH_SPEC:</h4>
+                    <ul style="font-size: 13px; list-style: none; padding: 0; line-height: 2;">
+                        <li>• Language: Python</li>
+                        <li>• Core: NT_USER Hook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+                    <div style="margin: 30px 0; padding: 20px; border: 1px solid #000; background: #f9f9f9;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span style="font-weight: 900; letter-spacing: 1px;">LICENSE_ACCESS:</span>
+                    <span style="font-family: monospace; font-weight: 900; color: #ff0000;">$10.00 / LIFETIME</span>
+                </div>
+                <a href="https://t.me/ssssssssssssssssssssssssss" target="_blank" class="buy-button-modal">
+                    [ BUY ]
+                </a>
+            </div>`
+},
 'web-slayer': {
     type: 'exploit',
     title: "DDOS_TOOL // V1.0",
@@ -397,6 +438,51 @@ const modalData = {
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <span style="font-weight: 900; letter-spacing: 1px; font-size: 12px;">FILE_ACCESS:</span>
                     <span style="font-family: monospace; font-weight: 900; color: #000;">SC_BRW.RAR</span>
+                </div>
+            <a href="https://cdn.discordapp.com/attachments/1474735923819446344/1480656562090541096/SCBRW.rar?ex=69b07861&is=69af26e1&hm=23c73ae028b390fa32012622f2df4cb42c279d3da82a83bf54733289c153f87f&" download class="free-dl-button">[ DOWNLOAD_FREE ]</a>
+            </div>
+        </div>`
+},
+'gm_macros': {
+    type: 'exploit',
+    title: "GM_MCS // V1.0",
+    content: `
+        <div style="color: #000; font-family: 'Inter', sans-serif;">
+            <div style="display: flex; gap: 30px; margin-bottom: 30px; align-items: flex-start; flex-wrap: wrap;">
+                <img src="img/mcs.png" style="width: 100%; max-width: 350px; height: 200px; object-fit: cover; border: 1px solid #000; filter: grayscale(1) contrast(1.2);">
+                <div style="flex: 1; min-width: 250px;">
+                    <div style="font-size: 10px; font-weight: 900; letter-spacing: 2px; opacity: 0.4; margin-bottom: 10px;">[ UTILITY_OVERVIEW ]</div>
+                    <p style="font-size: 14px; line-height: 1.6; opacity: 0.8;">
+                       Высокоточный игровой макрос с аппаратной эмуляцией ввода. Автоматический контроль вертикальной отдачи за счет мгновенного смещения оси мыши вниз при стрельбе. Полная невидимость для античитов.
+                    </p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 25px;">
+                <div>
+                    <h4 style="font-size: 12px; font-weight: 900; text-transform: uppercase; margin-bottom: 12px;">> FUNCTIONALITY:</h4>
+                    <ul style="font-size: 13px; list-style: none; padding: 0; line-height: 2;">
+                        <li>• Recoil Compensation: Плавное опускание прицела</li>
+                        <li>• Dynamic Delay: Рандомизация интервалов кликов</li>
+                        <li>• Smart Trigger: Активация строго по кнопке бинда</li>
+                        <li>• Application menu: Красивое меню с настройкой</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size: 12px; font-weight: 900; text-transform: uppercase; margin-bottom: 12px;">> TECHNICAL_DATA:</h4>
+                    <ul style="font-size: 13px; list-style: none; padding: 0; line-height: 2;">
+                        <li>• Core: Low-Level Input Hook</li>
+                        <li>• Architecture: Python clear</li>
+                        <li>• Latency: &lt; 1ms Response Time</li>
+                        <li>• Bypass: Kernel-Level Masking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 35px; padding: 25px; border: 1px solid #000; background: #fdfdfd;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <span style="font-weight: 900; letter-spacing: 1px; font-size: 12px;">FILE_ACCESS:</span>
+                    <span style="font-family: monospace; font-weight: 900; color: #000;">GM_MCS.RAR</span>
                 </div>
             <a href="https://cdn.discordapp.com/attachments/1474735923819446344/1480656562090541096/SCBRW.rar?ex=69b07861&is=69af26e1&hm=23c73ae028b390fa32012622f2df4cb42c279d3da82a83bf54733289c153f87f&" download class="free-dl-button">[ DOWNLOAD_FREE ]</a>
             </div>
