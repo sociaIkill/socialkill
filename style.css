@@ -85,6 +85,38 @@ body {
     opacity: 0.8;
 }
 
+.exit-btn {
+    position: fixed;
+    top: 24px;
+    right: 28px;
+    z-index: 9000;
+    background: #000000;
+    border: 1px solid var(--border-bright);
+    color: var(--text-secondary);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+.exit-btn:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.02);
+}
+.exit-btn-icon {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
 .dot {
     width: 12px; height: 12px;
     background: var(--text);
@@ -188,31 +220,57 @@ body {
 .cursor-hover .cursor-trace { opacity: 0; }
 
 .side-nav {
-    position: fixed; right: 40px; top: 50%;
+    position: fixed; 
+    right: 40px; /* Меню справа */
+    top: 50%;
     transform: translateY(-50%);
-    display: flex; flex-direction: column; gap: 30px;
-    z-index: 1000;
+    display: flex; 
+    flex-direction: column; 
+    gap: 30px;
+    z-index: 1000; /* Самый верхний слой */
 }
+
 .nav-item {
-    width: 8px; height: 8px;
-    background: var(--text);
+    width: 10px; 
+    height: 10px;
+    background: var(--text); /* Белые точки */
     border-radius: 50%;
     position: relative;
     transition: var(--transition);
     text-decoration: none;
     display: block;
+    opacity: 0.7; /* Немного прозрачные в обычном состоянии */
 }
+
+/* Текст подписи (лейбл) */
 .nav-item::before {
     content: attr(data-label);
-    position: absolute; right: 25px; top: 50%;
+    position: absolute; 
+    right: 25px; /* Текст СЛЕВА от точки */
+    top: 50%;
     transform: translateY(-50%);
-    color: var(--text); font-size: 10px; letter-spacing: 2px;
-    opacity: 0; transition: var(--transition);
-    text-transform: uppercase; white-space: nowrap;
-    pointer-events: none;
+    color: var(--text); 
+    font-size: 10px; 
+    letter-spacing: 2px;
+    opacity: 0; /* Скрыт по умолчанию */
+    transition: var(--transition);
+    text-transform: uppercase; 
+    white-space: nowrap;
+    pointer-events: none; /* Чтобы не мешал клику по точке */
 }
-.nav-item:hover { transform: scale(1.5); box-shadow: var(--glow); }
-.nav-item:hover::before { opacity: 1; text-shadow: var(--glow); }
+
+/* Состояние при наведении */
+.nav-item:hover { 
+    transform: scale(1.6); /* Увеличиваем точку */
+    box-shadow: var(--glow); /* Свечение */
+    opacity: 1;
+}
+
+.nav-item:hover::before { 
+    opacity: 1; /* Показываем текст */
+    right: 35px; /* Отпрыгивает чуть левее при наведении */
+    text-shadow: var(--glow);
+}
 
 .glow-hover { transition: var(--transition); }
 .glow-hover:hover {
