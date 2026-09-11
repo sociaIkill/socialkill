@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+:root {
+    --bg-color: #000000;
+    --accent-white: #ffffff;
+    --dim-glow: rgba(255, 255, 255, 0.15);
+    --strong-glow: rgba(255, 255, 255, 0.3);
+    --text: #ffffff;
+    --glow: 0 0 20px rgba(255, 255, 255, 0.8);
+    --transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    cursor: none !important;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--accent-white);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-photo-layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    filter: brightness(0.35) blur(4px);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 1s ease;
+}
+
+.bg-photo-layer.looping {
+    animation: bgPhotoCycle 5s ease-in-out infinite;
+}
+
+.cursor-dot, .cursor-trace {
+    position: fixed;
+    top: 0; left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2147483647 !important;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    background-color: #ffffff;
+}
+.cursor-dot {
+    width: 8px; height: 8px;
+    background: var(--text);
+    transition: width 0.3s, height 0.3s, background 0.3s;
+}
+.cursor-trace {
+    width: 24px; height: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: width 0.3s, height 0.3s, box-shadow 0.3s;
+}
+.cursor-hover .cursor-dot {
+    width: 40px; height: 40px;
+    background: transparent;
+    border: 1px solid var(--text);
+    box-shadow: var(--glow);
+}
+.cursor-hover .cursor-trace { opacity: 0; }
+
+.exit-btn {
+    position: fixed;
+    top: 24px;
+    right: 28px;
+    z-index: 9000;
+    background: #000000;
+    border: 1px solid var(--border-bright);
+    color: var(--text-secondary);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+.exit-btn:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.02);
+}
+.exit-btn-icon {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.app-container {
+    width: 100%;
+    max-width: 380px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.photo-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--dim-glow);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards 1s;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.photo-wrapper:hover img {
+    transform: scale(1.08);
+}
+
+.photo-wrapper:hover {
+    box-shadow: 0 0 25px var(--strong-glow);
+    border-color: rgba(255, 255, 255, 0.082);
+}
+
+.logo-center {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--accent-white);
+    text-shadow: 0 0 10px var(--dim-glow);
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards 1.3s;
+}
+
+.logo-center span {
+    animation: textBreathe 4s ease-in-out infinite;
+}
+
+.input-group {
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards 1.5s;
+}
+
+.password-input {
+    width: 100%;
+    padding: 18px 50px 18px 24px;
+    font-size: 1rem;
+    color: var(--accent-white);
+    background: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 35px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.password-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    transition: opacity 0.3s ease;
+}
+
+.password-input:focus {
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 15px var(--dim-glow);
+    background: #000;
+}
+
+.password-input:focus::placeholder {
+    opacity: 0;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    fill: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.eye-icon:hover {
+    fill: var(--accent-white);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    background: var(--accent-white);
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px var(--dim-glow);
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards 1.9s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #e6e6e6;
+    box-shadow: 0 0 20px var(--strong-glow);
+}
+
+.login-btn:active {
+    background: #cccccc;
+    box-shadow: 0 0 8px var(--dim-glow);
+}
+
+.password-input.error {
+    border-color: #ff3b30 !important;
+    box-shadow: 0 0 15px rgba(255, 59, 48, 0.5) !important;
+    animation: shake 0.4s ease-in-out;
+}
+
+.login-btn span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-anim 0.6s linear;
+    background-color: rgba(0, 0, 0, 0.2); 
+    pointer-events: none;
+}
+
+@keyframes ripple-anim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bgPhotoCycle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 0.25; }
+}
+
+@keyframes textBreathe {
+    0%, 100% { text-shadow: 0 0 10px var(--dim-glow); }
+    50% { text-shadow: 0 0 18px var(--strong-glow); }
+}
+
+body.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    * { cursor: auto !important; }
+    .cursor-dot, .cursor-trace { display: none; }
+    .logout-btn { top: 20px; right: 20px; padding: 9px 16px; font-size: 0.75rem; }
+}
