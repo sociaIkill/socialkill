@@ -549,15 +549,52 @@ body {
 .work-card:hover .desc { opacity: 1 !important; transform: translateY(0) !important; }
 
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-    
+
 .zoom-in-scroll {
     opacity: 0;
     transform: scale(0.85);
     transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 .zoom-in-scroll.visible {
     opacity: 1;
     transform: scale(1);
+}
+
+.animated-video-border {
+    position: relative;
+    width: 100%;
+    max-width: 1050px;
+    border-radius: 36px;
+    padding: 2px;
+    background: linear-gradient(120deg, #1c1c1e, #ffffff, #000000, #000000);
+    background-size: 300% 300%;
+    animation: dark-red-glow 5s ease infinite;
+    display: flex;
+}
+
+.animated-video-border video {
+    width: 100%;
+    height: auto;
+    border-radius: 34px;
+    display: block;
+    object-fit: cover;
+    background-color: #000;
+}
+
+@keyframes dark-red-glow {
+    0% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 15px rgba(253, 253, 253, 0.1);
+    }
+    50% {
+        background-position: 100% 50%;
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.35);
+    }
+    100% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
 }
 
 .delayed-hand {
