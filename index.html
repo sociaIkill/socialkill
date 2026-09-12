@@ -47,7 +47,11 @@
     </section>
 
 <section style="display: flex; justify-content: center; align-items: center; padding: 40px 5vw; width: 100%; box-sizing: border-box; position: relative; z-index: 2;">
-    <video id="scroll-video" src="img/your-video.mp4" class="zoom-in-scroll" playsinline preload="metadata" style="width: 100%; max-width: 1050px; height: auto; border-radius: 36px; box-shadow: 0 0 50px rgba(253, 253, 253, 0); display: block; object-fit: cover;"></video>
+    <div class="animated-video-border zoom-in-scroll">
+        <video id="scroll-video"
+               autoplay muted loop playsinline preload="metadata"
+               src="img/your-video.mp4"></video>
+    </div>
 </section>
 
     <section style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 80px; text-align: center;">
